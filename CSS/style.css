@@ -1,6 +1,20 @@
 @charset "UTF-8";
 
 /* ========== 全站基本樣式 ========== */
+
+/* 確保整個網站不會超出螢幕範圍 */
+body, html {
+    overflow-x: hidden; /* 禁止水平滾動 */
+    width: 100%;
+}
+
+/* 確保所有區塊的最大寬度不超出視窗 */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     background: linear-gradient(135deg, #F4F1EC 0%, #EAE6DF 100%);
