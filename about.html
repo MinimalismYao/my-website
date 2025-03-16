@@ -2,24 +2,37 @@
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
-    <title>關於我 - Yao's Space</title>
-    <link rel="stylesheet" href="CSS/style.css"> <!-- 確保這個連結正確 -->
+    <title>About Me - Yao's Space</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- <link rel="icon" type="image/png" href="images/favicon_128_circle.png">   -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_circle.ico">
 </head>
 <body>
 
     <header>
-        <h1>關於我</h1>
+        <h1>About Me</h1>
         <nav>
             <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="about.html">關於</a></li>
-                <li><a href="content.html">我的內容</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="content.html">My Content</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="my-content.html">全部文章</a></li>
+                        <li><a href="category-psychology.html">心理學</a></li>
+                        <li><a href="category-philosophy.html">哲學</a></li>
+                        <li><a href="category-fitness.html">健身 / 身體健康</a></li>
+                        <li><a href="category-growth.html">個人成長</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 
+
     <section class="about-container">
-        <img src="images/profile.png" alt="Yao的個人圖片" class="profile-img">
+        <img src="images/yao.webp" alt="Yao的個人圖片" class="profile-img">
         <h2>你好，我是 Yao</h2>
         <p>
             擁有理工背景，卻喜歡探索智慧的類哲學家。<br>
