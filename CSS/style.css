@@ -180,19 +180,38 @@ nav ul li a:hover {
 }
 
 
-/* 手機版：1 列 2 格 */
+/* 桌機版：保持 2x2 排列 */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 手機版 2 列 */
+    grid-template-columns: repeat(2, 1fr); /* 讓桌機版是 2x2 */
     gap: 20px;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-/* 桌機版：固定為 2x2 */
-@media (min-width: 768px) {
+/* 格子內部的文字與圖示置中 */
+.category-grid .category-item {
+    display: flex;
+    flex-direction: column; /* 讓文字和圖示垂直排列 */
+    justify-content: center; /* 垂直置中 */
+    align-items: center; /* 水平置中 */
+    text-align: center; /* 文字置中 */
+    height: 140px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F5F1E8;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 手機版：改成 1x4（直向排列） */
+@media (max-width: 768px) {
     .category-grid {
-        grid-template-columns: repeat(2, 1fr); /* 讓它保持 2x2 格式 */
+        grid-template-columns: 1fr; /* 讓手機版是 1x4 */
+        max-width: 90%;
+    }
+    
+    .category-grid .category-item {
+        height: 120px; /* 手機版格子稍微縮小 */
     }
 }
 
