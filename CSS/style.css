@@ -14,7 +14,7 @@ body {
 header {
     background: #CABBA6;
     color: #3A3228;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 3px solid #A08D76;
 }
 
@@ -25,7 +25,7 @@ nav ul {
     display: flex;
     justify-content: center;
     background: #CABBA6;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 nav ul li {
