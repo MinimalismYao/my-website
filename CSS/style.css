@@ -167,10 +167,17 @@ nav ul li a:hover {
 /* 讓分類項目排列成 2x2 的網格 */
 .category-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* 自適應，讓手機版不擠 */
+    gap: 20px; /* 增加間距 */
+    padding: 20px; /* 增加內邊距，避免貼邊 */
+    margin: 0 auto; /* 讓它保持置中 */
+    max-width: 90%; /* 避免區塊太寬，影響觀感 */
+
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 600px;
-    margin: auto;
+    margin: auto; */
 }
 
 .category-item {
