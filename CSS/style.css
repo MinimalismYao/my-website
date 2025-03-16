@@ -77,7 +77,7 @@ nav ul li a:hover {
     color: #1F1A15;
 }
 
-/* ========== 我的內容下拉選單 ========== */
+/* ========== My Content 下拉選單 ========== */
 .dropdown-menu {
     list-style: none;
     position: absolute;
@@ -87,33 +87,36 @@ nav ul li a:hover {
     border-radius: 6px;
     padding: 10px 0;
     margin: 0;
-    width: 180px;
+    width: 160px; /* 避免太寬 */
     display: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* 確保中文選單文字對齊 */
 .dropdown-menu li {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .dropdown-menu li a {
     display: block;
-    padding: 10px;
+    padding: 8px;
+    font-size: 16px; /* 確保文字大小適中 */
     color: #3A3228;
     transition: background 0.3s ease;
-    text-align: left;
-    padding-left: 15px;
 }
 
+/* 滑鼠移到「My Content」時顯示下拉選單 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 下拉選單的懸停效果 */
 .dropdown-menu li a:hover {
     background: rgba(160, 141, 118, 0.4);
 }
 
-/* 滑鼠移到「我的內容」時顯示下拉選單 */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
 
 /* ========== 個人介紹區塊 ========== */
 .intro {
