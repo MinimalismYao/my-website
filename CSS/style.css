@@ -32,6 +32,21 @@ header {
     border-bottom: 3px solid #A08D76;
 }
 
+/* 確保標題大小在桌機版不會變小 */
+header h1 {
+    font-size: 32px; /* 讓桌機版標題更明顯 */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 手機版的標題大小 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 26px; /* 手機版稍微小一點 */
+    }
+}
+
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -164,15 +179,31 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* 讓分類項目排列成 2x2 的網格 */
-.category-grid {
+/* .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* 自適應，讓手機版不擠 */
     gap: 20px; /* 增加間距 */
     padding: 20px; /* 增加內邊距，避免貼邊 */
     margin: 0 auto; /* 讓它保持置中 */
     max-width: 90%; /* 避免區塊太寬，影響觀感 */
+} */
+
+/* 手機版：1 列 2 格 */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 手機版 2 列 */
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
 }
+
+/* 桌機版：固定為 2x2 */
+@media (min-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 讓它保持 2x2 格式 */
+    }
+}
+
 
 .category-item {
     background: rgba(160, 141, 118, 0.2);
