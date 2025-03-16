@@ -183,9 +183,9 @@ nav ul li a:hover {
 /* 桌機版：保持 2×2 排列 */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 確保 2 列 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px; /* 設定格子間距 */
-    max-width: 700px; /* 避免太窄 */
+    max-width: 90%; /* 避免太窄 */
     margin: 20px auto; /* 置中 */
 }
 
@@ -207,9 +207,9 @@ nav ul li a:hover {
 /* 手機版：改成 1×4 直向排列 */
 @media (max-width: 768px) {
     .category-grid {
-        grid-template-columns: 1fr; /* 手機版單欄排列 */
-        max-width: 90%;
-    }
+        grid-template-columns: repeat(2, 1fr); /* 桌機版 2x2 */
+        gap: 30px; /* 增加間距 */
+        }
     
     .category-grid .category-item {
         height: 120px; /* 手機版格子稍微縮小 */
