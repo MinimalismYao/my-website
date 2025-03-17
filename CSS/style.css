@@ -4,7 +4,7 @@
 
 /* 確保整個網站不會超出螢幕範圍 */
 body, html {
-    overflow-x: hidden; /* 禁止水平滾動 */
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -14,11 +14,10 @@ body, html {
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     background: linear-gradient(135deg, #F4F1EC 0%, #EAE6DF 100%);
-    color: #3A3228; /* 柔和的深棕色 */
+    color: #3A3228;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -32,20 +31,17 @@ header {
     border-bottom: 3px solid #A08D76;
 }
 
-/* 確保標題大小在桌機版不會變小 */
 header h1 {
-    font-size: 32px; /* 讓桌機版標題更明顯 */
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
 }
 
-/* 手機版的標題大小 */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 26px; /* 手機版稍微小一點 */
+        font-size: 26px;
     }
 }
-
 
 nav ul {
     list-style: none;
@@ -70,6 +66,7 @@ nav ul li a {
     display: block;
     border-radius: 6px;
     transition: background 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
 }
 
 nav ul li a:hover {
@@ -87,89 +84,16 @@ nav ul li a:hover {
     border-radius: 6px;
     padding: 10px 0;
     margin: 0;
-    width: 160px; /* 避免太寬 */
+    width: 160px;
     display: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 確保中文選單文字對齊 */
-.dropdown-menu li {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.dropdown-menu li a {
-    display: block;
-    padding: 8px;
-    font-size: 16px; /* 確保文字大小適中 */
-    color: #3A3228;
-    transition: background 0.3s ease;
-}
-
-/* 滑鼠移到「My Content」時顯示下拉選單 */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* 下拉選單的懸停效果 */
-.dropdown-menu li a:hover {
-    background: rgba(160, 141, 118, 0.4);
-}
-
-
-/* ========== 個人介紹區塊 ========== */
-.intro {
-    margin: 50px auto;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.intro img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #A08D76;
-}
-
-.intro h2 {
-    color: #4C3F34;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/* ========== 社群連結 ========== */
-.social-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.social-links li {
-    margin-bottom: 10px;
-}
-
-.social-links a {
-    display: block;
-    padding: 12px 0;
-    background: rgba(160, 141, 118, 0.3);
-    border-radius: 8px;
-    color: #3A3228;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.social-links a:hover {
-    background: rgba(160, 141, 118, 0.5);
-    color: #1F1A15;
-}
-
-/* ========== 內容分類區塊（探索我的內容） ========== */
+/* ========== 內容分類區塊 ========== */
 .categories {
     margin: 50px auto;
     max-width: 800px;
@@ -182,53 +106,27 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-
-/* 桌機版：保持 2×2 排列 */
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* 設定格子間距 */
-    max-width: 90%; /* 避免太窄 */
-    margin: 20px auto; /* 置中 */
+    gap: 20px;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
-/* 格子內的內容置中 */
 .category-grid .category-item {
     display: flex;
-    flex-direction: column; /* 讓文字和圖示垂直排列 */
-    justify-content: center; /* 垂直置中 */
-    align-items: center; /* 水平置中 */
-    text-align: center; /* 文字置中 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 140px;
     padding: 15px;
     border-radius: 10px;
     background-color: #F5F1E8;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* 確保格子填滿網格 */
-}
-
-/* 手機版：改成 1×4 直向排列 */
-@media (max-width: 768px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr); /* 桌機版 2x2 */
-        gap: 30px; /* 增加間距 */
-        }
-    
-    .category-grid .category-item {
-        height: 120px; /* 手機版格子稍微縮小 */
-    }
-}
-
-
-.category-item {
-    background: rgba(160, 141, 118, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #3A3228;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    line-height: 1.6;
 }
 
 .category-item:hover {
@@ -246,25 +144,3 @@ footer {
     width: 100%;
     border-top: 3px solid #A08D76;
 }
-
-
-/* ========== 「關於」頁面的專屬 CSS ========== */
-.about-container {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: center;
-}
-
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #A08D76;
-    margin-bottom: 15px;
-}
-
