@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yao 的個人網站</title>
+    
+    <!-- SEO 優化 -->
+    <meta name="description" content="Yao 的個人網站，分享心理學、哲學、健身與個人成長的內容。">
+    <meta name="keywords" content="心理學, 哲學, 健身, 個人成長, 自我提升, 科技, 技術, 小說, 學習法, 腦科學">
+    <meta name="author" content="Yao">
+    <meta property="og:title" content="Yao 的個人網站">
+    <meta property="og:description" content="探索心理學、哲學、健身、科技、小說、學習法與腦科學的知識與思考。">
+    <meta property="og:image" content="images/yao.webp">
+    <meta property="og:type" content="website">
+
+    <!-- 樣式與 Favicon -->
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <!-- <link rel="icon" type="image/png" href="images/favicon_128_circle.png">   -->
     <link rel="icon" type="image/x-icon" href="images/favicon_circle.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_180.png">
 </head>
 
 <body>
-
     <!-- 頁首 -->
     <header>
         <h1>Yao's Space</h1>
@@ -20,33 +30,35 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li class="dropdown">
-                    <a href="content.html">Content</a>
+                    <a href="content.html" aria-expanded="false">Content</a>
                     <ul class="dropdown-menu">
                         <li><a href="my-content.html">全部文章</a></li>
                         <li><a href="category-psychology.html">心理學</a></li>
+                        <li><a href="category-neuroscience.html">腦科學</a></li>
+                        <li><a href="category-learning.html">學習法</a></li>
                         <li><a href="category-philosophy.html">哲學</a></li>
-                        <li><a href="category-fitness.html">健身 / 身體健康</a></li>
+                        <li><a href="category-fitness.html">健身 / 健康</a></li>
                         <li><a href="category-growth.html">個人成長</a></li>
+                        <li><a href="category-technology.html">科技 / 技術</a></li>
+                        <li><a href="category-literature.html">小說</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
-
     <!-- 主要內容 -->
     <main>
-
         <!-- 個人介紹 -->
         <section id="about" class="intro">
-            <img src="images/yao.webp" alt="Yao的頭像">
+            <img src="images/yao.webp" alt="Yao的頭像" width="200" height="200" loading="lazy">
             <h2>你好，我是 Yao</h2>
             <p>擁有理工背景，卻喜歡探索智慧的類哲學家。<br>
                我分享心理、哲學、健身與個人成長。</p>
             <ul class="social-links">
                 <li><a href="https://www.instagram.com/minimalist_shine/" target="_blank">Instagram</a></li>
                 <li><a href="https://www.threads.net/@minimalist_shine" target="_blank">Threads</a></li>
-                <li><a href="mailto:musemoran@gmail.com?subject=Hi！&body=我對你的[請填入你對哪方面感興趣]內容很感興趣，希望能夠進一步交流！">Email</a></li>
+                <li><a href="mailto:musemoran@gmail.com?subject=Hi！&body=我對你的內容很感興趣，希望能夠進一步交流！">Email</a></li>
             </ul>
         </section>
 
@@ -54,31 +66,45 @@
         <section class="categories">
             <h2>探索我的內容</h2>
             <div class="category-grid">
-                <a href="#" class="category-item">
+                <a href="category-psychology.html" class="category-item">
                     <h3>🧠 心理學</h3>
                     <p>探索人類行為與思維模式</p>
                 </a>
-                <a href="#" class="category-item">
+                <a href="category-neuroscience.html" class="category-item">
+                    <h3>🧬 腦科學</h3>
+                    <p>解析大腦運作與認知機制</p>
+                </a>
+                <a href="category-learning.html" class="category-item">
+                    <h3>📚 學習法</h3>
+                    <p>提升學習效率與知識管理</p>
+                </a>
+                <a href="category-philosophy.html" class="category-item">
                     <h3>📖 哲學</h3>
                     <p>思考人生的根本問題</p>
                 </a>
-                <a href="#" class="category-item">
-                    <h3>💪 健身 / 身體健康</h3>
+                <a href="category-fitness.html" class="category-item">
+                    <h3>💪 健身 / 健康</h3>
                     <p>探索身體與心靈的極限</p>
                 </a>
-                <a href="#" class="category-item">
+                <a href="category-growth.html" class="category-item">
                     <h3>🚀 個人成長</h3>
                     <p>提升自我，拓展思維</p>
                 </a>
+                <a href="category-technology.html" class="category-item">
+                    <h3>🖥️ 科技 / 技術</h3>
+                    <p>探索新興科技與技術應用</p>
+                </a>
+                <a href="category-literature.html" class="category-item">
+                    <h3>📖 小說</h3>
+                    <p>沉浸於故事與文學創作</p>
+                </a>
             </div>
         </section>
-
     </main>
 
     <!-- 頁腳 -->
     <footer>
         <p>© 2025 Yao. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
