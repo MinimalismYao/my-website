@@ -16,22 +16,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 📧 複製 Email 功能
-    const emailButton = document.getElementById("copy-email");
-    if (emailButton) {
-        emailButton.addEventListener("click", function (e) {
-            e.preventDefault();
-            const email = "musemoran@gmail.com";
+ // 📧 複製 Email 功能 + 顯示 toast
+const emailButton = document.getElementById("copy-email");
+const toast = document.getElementById("toast");
 
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(email).then(() => {
-                    alert("📧 已複製電子郵件地址！");
-                }).catch(() => {
-                    alert("⚠️ 無法自動複製，請手動複製：" + email);
-                });
-            } else {
-                alert("⚠️ 不支援自動複製，請手動複製：" + email);
-            }
-        });
-    }
+function showToast(message) {
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        toast.classList.add("hidden");
+    }, 3000); // 顯示 3 秒後消失
+}
+
+if (emailButton) {
+    emailButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        const email = "musemoran@gmail.com";
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(email).then(() => {
+                showToast("📧 已複製電子郵件地址！");
+            }).catch(() => {
+                showToast("⚠️ 無法自動複製，請手動複製");
+            });
+        } else {
+            showToast("⚠️ 不支援複製功能，請手動複製");
+        }
+    });
+}
 });
