@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {a
     const emailButton = document.getElementById("copy-email");
 
     emailButton.addEventListener("click", function (e) {
