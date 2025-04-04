@@ -14,3 +14,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const emailButton = document.getElementById("copy-email");
+
+    emailButton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const email = "musemoran@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("📧 已複製電子郵件地址！");
+        }).catch(err => {
+            alert("⚠️ 複製失敗，請手動複製： " + email);
+        });
+    });
+});
